@@ -1,0 +1,19 @@
+CALENDARIO ANDROID - VERSION ROTATIVA
+
+Qué cambia:
+- 1 toque en un día: vacaciones (amarillo).
+- 2º toque en el mismo día: festivo manual (rojo).
+- 3º toque: borra la marca manual.
+- Se conservan las vacaciones que ya tenías guardadas de versiones anteriores.
+
+Para actualizar GitHub:
+1) Descomprime este ZIP.
+2) Entra en tu repositorio CALENDARIO-ANDROID.
+3) Pulsa Add file > Upload files.
+4) Arrastra TODO el contenido del ZIP: index.html, manifest.json, sw.js, carpeta icons y este LEEME si quieres.
+5) Pulsa Commit changes.
+6) Espera 1 minuto.
+7) En Android abre Chrome y entra en:
+   https://germanmartinrodriguez-creator.github.io/CALENDARIO-ANDROID/
+8) Si ves la versión antigua: Chrome > ajustes del sitio > borrar datos, y vuelve a abrir.
+9) Si ya la tienes instalada, abre/cierra la app un par de veces o desinstala e instala de nuevo para que coja la nueva caché.

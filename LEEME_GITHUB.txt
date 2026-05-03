@@ -1,0 +1,17 @@
+SUBE ESTOS ARCHIVOS A TU REPOSITORIO CALENDARIO-ANDROID:
+
+- index.html
+- manifest.json
+- sw.js
+- carpeta icons completa
+
+En GitHub:
+1) Entra en el repositorio CALENDARIO-ANDROID.
+2) Add file > Upload files.
+3) Arrastra todo el contenido de esta carpeta.
+4) Commit changes.
+5) Espera 1 minuto.
+6) En Android, abre Chrome y entra en:
+   https://germanmartinrodriguez-creator.github.io/CALENDARIO-ANDROID/
+7) Ajustes del sitio > Borrar datos.
+8) Menú de Chrome > Instalar app.

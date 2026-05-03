@@ -1,0 +1,19 @@
+CALENDARIO ANDROID - VERSION INFO FESTIVOS
+
+Cambios incluidos:
+- 1 toque en un día normal: vacaciones.
+- 2º toque: festivo manual.
+- 3º toque: borrar marca.
+- Si el día es festivo oficial, al tocarlo muestra el nombre del festivo.
+- Los festivos manuales también muestran una ficha informativa.
+
+INSTALACION EN GITHUB:
+1) Descomprime este ZIP.
+2) Entra en tu repositorio CALENDARIO-ANDROID de GitHub.
+3) Pulsa Add file > Upload files.
+4) Sube TODO el contenido de este ZIP, sustituyendo archivos anteriores.
+5) Pulsa Commit changes.
+6) Espera 1-2 minutos.
+7) En Android abre Chrome, entra en:
+   https://germanmartinrodriguez-creator.github.io/CALENDARIO-ANDROID/
+8) Si ves la versión antigua, borra datos del sitio en Chrome o abre en modo incógnito una vez.
