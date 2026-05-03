@@ -1,0 +1,21 @@
+CALENDARIO BARCELONA - PWA COMPLETA ANDROID
+
+Contenido:
+- index.html
+- manifest.json mejorado
+- sw.js para funcionamiento offline
+- iconos premium en varios tamaños
+
+IMPORTANTE:
+Chrome Android no instala una PWA abierta como archivo file://.
+Para que aparezca “Instalar app” o “Añadir a pantalla de inicio”, abre esta carpeta desde una URL http/https.
+
+Opciones:
+1) Subir la carpeta a un hosting con HTTPS.
+2) Usar un servidor local Android tipo “Web Server for Android” y abrir la dirección http://... en Chrome.
+3) En PC, probar con un servidor local: python -m http.server 8080 y abrir http://localhost:8080
+
+Una vez abierta por http/https:
+Chrome > menú ⋮ > Instalar app / Añadir a pantalla de inicio.
+
+La app guarda tus vacaciones en el almacenamiento local del navegador/dispositivo.
