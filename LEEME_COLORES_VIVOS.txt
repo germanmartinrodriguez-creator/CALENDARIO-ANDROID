@@ -1,0 +1,13 @@
+CALENDARIO ANDROID - COLORES VIVOS
+
+Cambios incluidos:
+- Fines de semana con rojo más intenso.
+- Festivos oficiales/manuales en rojo oscuro.
+- Día de hoy más resaltado en azul vivo.
+- Vacaciones en amarillo más vivo.
+- Leyenda con más separación.
+- Se mantiene la información de festivos al tocar el día.
+- Se mantiene el sistema rotativo: vacaciones -> festivo manual -> borrar.
+
+Sube todos estos archivos a GitHub sustituyendo los anteriores.
+Después, en Chrome borra datos del sitio para que no cargue la caché antigua.

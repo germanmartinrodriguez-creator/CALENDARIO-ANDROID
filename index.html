@@ -6,14 +6,39 @@
 <title>Calendario Barcelona</title>
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./icons/icon-192.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#c1121f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Calendario Barcelona">
 <style>
-:root{--bg:#f4f6f8;--card:#fff;--line:#d9dde5;--txt:#18202a;--muted:#667085;--blue:#2563eb;--green:#16a34a;--orange:#f97316;--red:#dc2626;--yellow:#ffe066}
-*{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;color:var(--txt)}
-.app{max-width:520px;margin:0 auto;padding:10px}.head{background:var(--card);border-radius:16px;padding:10px;box-shadow:0 2px 10px #0001;text-align:center}.brand{display:flex;align-items:center;justify-content:center;gap:10px}.brand img{width:44px;height:44px;border-radius:11px}.brand h1{font-size:20px;margin:0}.sub{font-size:12px;color:var(--muted);margin-top:2px}.row{display:flex;gap:6px;justify-content:center;align-items:center;margin-top:10px;flex-wrap:nowrap}.btn{border:0;border-radius:10px;padding:9px 10px;color:#fff;font-weight:bold;font-size:14px;min-width:0}.prev,.next{background:var(--blue);width:48px}.today{background:var(--green);flex:1}.print{background:var(--orange);flex:1.35}.monthTitle{text-align:center;font-size:20px;font-weight:bold;text-transform:capitalize;margin:14px 0 8px}.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;padding:0 3px}.dow{text-align:center;font-weight:bold;color:#344054;font-size:13px;padding:4px 0}.day{position:relative;min-height:48px;border:1px solid var(--line);border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold;box-shadow:0 1px 2px #0000000d;overflow:hidden}.empty{min-height:48px}.weekend{color:#ff1f1f}.holiday{background:#ffe4e6;color:#b00000;border-color:#ffadb7}.vacation{background:var(--yellow);color:#493d00}.todayCell{outline:3px solid #3b82f6;outline-offset:-3px}.past::after{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:2px solid #111;opacity:.55;transform:rotate(-10deg)}.legend{display:flex;justify-content:center;gap:10px;font-size:12px;margin:10px 0 0;flex-wrap:wrap;color:#344054}.infoBox{margin:10px auto 0;background:#fff;border:1px solid #d0d5dd;border-radius:14px;padding:10px 12px;box-shadow:0 2px 10px #0001;display:none;max-width:500px}.infoBox.show{display:block}.infoTitle{font-weight:bold;font-size:15px;margin-bottom:3px}.infoText{font-size:13px;color:#475467;line-height:1.35}.infoHint{font-size:12px;color:#667085;margin-top:5px}.dot{display:inline-block;width:11px;height:11px;border-radius:4px;margin-right:4px;vertical-align:-1px}.d1{background:#3b82f6}.d2{background:#ff1f1f}.d3{background:#ffe4e6;border:1px solid #ff9aa8}.d4{background:#ffe066}.annual{display:none;max-width:900px;margin:0 auto;padding:10px}.annual h2{text-align:center;margin:6px 0 8px}.annualGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mini{background:#fff;border:1px solid #d0d5dd;border-radius:10px;padding:6px}.mini h3{text-align:center;text-transform:capitalize;margin:0 0 4px;font-size:14px}.miniGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px}.miniGrid div{text-align:center;font-size:10px;padding:2px;border-radius:3px;min-height:16px}.mini .dow2{font-weight:bold;color:#555}.miniHoliday{background:#ffe4e6!important;color:#b00000!important;font-weight:bold}.miniVacation{background:#ffe066!important;font-weight:bold}.actionsAnnual{text-align:center;margin:8px}.close{background:#475467}.hide{display:none!important}
+:root{
+  --bg:#eef3f8;--card:#fff;--line:#d6dce6;--txt:#121926;--muted:#5b6678;
+  --blue:#0066ff;--green:#16b84e;--orange:#ff7a00;--red:#ff2d2d;--deepred:#b80012;--yellow:#fff200
+}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;color:var(--txt)}
+.app{max-width:520px;margin:0 auto;padding:10px}
+.head{background:linear-gradient(180deg,#d7192b 0%,#a90f1d 100%);border-radius:16px;padding:10px;box-shadow:0 5px 18px #0002;text-align:center;color:#fff}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px}
+.brand img{width:48px;height:48px;border-radius:12px;box-shadow:0 2px 8px #0005;background:#fff}
+.brand h1{font-size:20px;margin:0;color:#fff;text-shadow:0 1px 2px #0006}
+.sub{font-size:12px;color:#ffe5e8;margin-top:2px}
+.row{display:flex;gap:7px;justify-content:center;align-items:center;margin-top:10px;flex-wrap:nowrap}
+.btn{border:0;border-radius:11px;padding:10px 10px;color:#fff;font-weight:bold;font-size:14px;min-width:0;box-shadow:0 3px 8px #0002}
+.prev,.next{background:var(--blue);width:48px}.today{background:var(--green);flex:1}.print{background:var(--orange);flex:1.35}.close{background:#475467}
+.monthTitle{text-align:center;font-size:21px;font-weight:bold;text-transform:capitalize;margin:14px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:0 3px}.dow{text-align:center;font-weight:bold;color:#344054;font-size:13px;padding:4px 0}
+.day{position:relative;min-height:50px;border:1px solid var(--line);border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:bold;box-shadow:0 2px 5px #00000012;overflow:hidden;color:#111827}
+.empty{min-height:50px}
+.weekend{background:var(--red);color:#fff;border-color:#ff4d4d;box-shadow:0 2px 6px #ff2d2d40}
+.holiday{background:var(--deepred)!important;color:#fff!important;border-color:#8f0010!important;box-shadow:0 2px 8px #b800124d}
+.vacation{background:var(--yellow)!important;color:#111!important;border-color:#d9c900!important;box-shadow:0 2px 8px #fff20070}
+.todayCell{background:var(--blue)!important;color:#fff!important;border-color:#004bd6!important;outline:3px solid #73a7ff;outline-offset:-3px;box-shadow:0 2px 10px #0066ff70}
+.past{opacity:.68}.past::after{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:2px solid #111;opacity:.55;transform:rotate(-10deg)}
+.legend{display:flex;justify-content:center;gap:12px;font-size:12px;margin:12px 0 0;flex-wrap:wrap;color:#344054;align-items:center}.legend span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.dot{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px}.d1{background:#0066ff}.d2{background:#ff2d2d}.d3{background:#b80012}.d4{background:#fff200;border:1px solid #d9c900}
+.infoBox{margin:11px auto 0;background:#fff;border:1px solid #d0d5dd;border-radius:14px;padding:11px 13px;box-shadow:0 4px 15px #00000017;display:none;max-width:500px}.infoBox.show{display:block}.infoTitle{font-weight:bold;font-size:15px;margin-bottom:3px}.infoText{font-size:13px;color:#344054;line-height:1.35}.infoHint{font-size:12px;color:#667085;margin-top:5px}
+.annual{display:none;max-width:900px;margin:0 auto;padding:10px}.annual h2{text-align:center;margin:6px 0 8px}.annualGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mini{background:#fff;border:1px solid #d0d5dd;border-radius:10px;padding:6px}.mini h3{text-align:center;text-transform:capitalize;margin:0 0 4px;font-size:14px}.miniGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px}.miniGrid div{text-align:center;font-size:10px;padding:2px;border-radius:3px;min-height:16px}.mini .dow2{font-weight:bold;color:#555}.miniHoliday{background:#b80012!important;color:#fff!important;font-weight:bold}.miniVacation{background:#fff200!important;color:#111!important;font-weight:bold}.actionsAnnual{text-align:center;margin:8px}.hide{display:none!important}
 @media print{body{background:#fff}.app{display:none}.annual{display:block;padding:0}.actionsAnnual{display:none}.annual h2{font-size:18px}.annualGrid{grid-template-columns:repeat(3,1fr);gap:5px}.mini{break-inside:avoid;border-radius:4px;padding:4px}.mini h3{font-size:12px}.miniGrid div{font-size:8px;min-height:12px;padding:1px}@page{size:A4 portrait;margin:7mm}}
 </style>
 </head>

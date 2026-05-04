@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calendario-barcelona-v5';
+const CACHE_NAME = 'calendario-barcelona-v6-vivo';
 const ASSETS = ['./','./index.html','./manifest.json','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install', event => {
   self.skipWaiting();
