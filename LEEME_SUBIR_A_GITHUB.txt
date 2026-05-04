@@ -1,0 +1,11 @@
+CALENDARIO ANDROID - COLORES ULTRA VIVOS
+
+1) Entra en GitHub > repositorio CALENDARIO-ANDROID.
+2) Add file > Upload files.
+3) Sube TODO el contenido de este ZIP, incluida la carpeta icons y el archivo icono.png.
+4) Commit changes.
+5) Espera 1-2 minutos.
+6) En Android: Chrome > abre tu URL > candado/ajustes del sitio > borrar datos.
+7) Cierra Chrome del todo y vuelve a abrir la URL.
+
+IMPORTANTE: si ves el icono roto o colores suaves, no se han subido todos los archivos o Chrome está cargando caché antigua.

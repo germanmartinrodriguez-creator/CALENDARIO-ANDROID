@@ -39,13 +39,25 @@ body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;color:
 .dot{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px}.d1{background:#0066ff}.d2{background:#ff2d2d}.d3{background:#b80012}.d4{background:#fff200;border:1px solid #d9c900}
 .infoBox{margin:11px auto 0;background:#fff;border:1px solid #d0d5dd;border-radius:14px;padding:11px 13px;box-shadow:0 4px 15px #00000017;display:none;max-width:500px}.infoBox.show{display:block}.infoTitle{font-weight:bold;font-size:15px;margin-bottom:3px}.infoText{font-size:13px;color:#344054;line-height:1.35}.infoHint{font-size:12px;color:#667085;margin-top:5px}
 .annual{display:none;max-width:900px;margin:0 auto;padding:10px}.annual h2{text-align:center;margin:6px 0 8px}.annualGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mini{background:#fff;border:1px solid #d0d5dd;border-radius:10px;padding:6px}.mini h3{text-align:center;text-transform:capitalize;margin:0 0 4px;font-size:14px}.miniGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px}.miniGrid div{text-align:center;font-size:10px;padding:2px;border-radius:3px;min-height:16px}.mini .dow2{font-weight:bold;color:#555}.miniHoliday{background:#b80012!important;color:#fff!important;font-weight:bold}.miniVacation{background:#fff200!important;color:#111!important;font-weight:bold}.actionsAnnual{text-align:center;margin:8px}.hide{display:none!important}
+
+/* ===== PALETA ULTRA VIVA ===== */
+.head{background:linear-gradient(180deg,#e21a2d 0%,#9b0011 100%)!important;border:1px solid #7a0010!important}
+.day{min-height:54px!important;border-radius:12px!important;border:1px solid #cfd7e3!important;box-shadow:0 3px 8px #0000001f!important;font-size:18px!important}
+.weekend{background:linear-gradient(180deg,#ff4a4a 0%,#f0182c 100%)!important;color:#fff!important;border-color:#d90016!important;box-shadow:0 4px 10px #f0182c55!important}
+.holiday{background:linear-gradient(180deg,#d20c1e 0%,#94000d 100%)!important;color:#fff!important;border-color:#72000a!important;box-shadow:0 4px 12px #94000d70!important}
+.vacation{background:linear-gradient(180deg,#fff700 0%,#ffe100 100%)!important;color:#111!important;border-color:#cfb900!important;box-shadow:0 4px 12px #ffe10090!important}
+.todayCell{background:linear-gradient(180deg,#1976ff 0%,#004fe8 100%)!important;color:#fff!important;border-color:#003eb8!important;outline:4px solid #82b6ff!important;outline-offset:-4px!important;box-shadow:0 4px 14px #0066ff95!important}
+.past{opacity:1!important}.past::after{border-top:3px solid #111!important;opacity:.62!important}
+.weekend.past::after,.holiday.past::after,.todayCell.past::after{border-top-color:#fff!important;opacity:.85!important}
+.btn{box-shadow:0 4px 10px #0003!important}.prev,.next{background:linear-gradient(180deg,#2b76ff,#004ee8)!important}.today{background:linear-gradient(180deg,#18c75a,#08a842)!important}.print{background:linear-gradient(180deg,#ff8b1a,#ff6500)!important}
+.dot{width:13px!important;height:13px!important}.d2{background:#f0182c!important}.d3{background:#94000d!important}.d4{background:#fff000!important}
 @media print{body{background:#fff}.app{display:none}.annual{display:block;padding:0}.actionsAnnual{display:none}.annual h2{font-size:18px}.annualGrid{grid-template-columns:repeat(3,1fr);gap:5px}.mini{break-inside:avoid;border-radius:4px;padding:4px}.mini h3{font-size:12px}.miniGrid div{font-size:8px;min-height:12px;padding:1px}@page{size:A4 portrait;margin:7mm}}
 </style>
 </head>
 <body>
 <div class="app" id="app">
   <div class="head">
-    <div class="brand"><img src="./icons/icon-192.png" alt="Icono"><div><h1>Calendario Barcelona</h1><div class="sub">Festivos automáticos · Toques: vacas / festivo / borrar</div></div></div>
+    <div class="brand"><img src="./icons/icon-192.png?v=ultra3" alt="" onerror="this.src='./icono.png?v=ultra3';this.onerror=null;"><div><h1>Calendario Barcelona</h1><div class="sub">Festivos automáticos · Colores vivos · Toques: vacas / festivo / borrar</div></div></div>
     <div class="row"><button class="btn prev" onclick="prev()">◀</button><button class="btn today" onclick="todayBtn()">Hoy</button><button class="btn next" onclick="next()">▶</button><button class="btn print" onclick="showAnnual(true)">Ver / imprimir</button></div>
   </div>
   <div class="monthTitle" id="title"></div>
