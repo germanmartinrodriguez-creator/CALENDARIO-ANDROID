@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Calendario Barcelona</title>
-<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="./manifest.json?v=final-definitiva-2">
 <link rel="icon" href="./icons/icon-192.png">
 <meta name="theme-color" content="#b90f1d">
 <style>
@@ -25,9 +25,28 @@ body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:
 .day.weekend{background:var(--red);border-color:#ef2f38;color:#fff}.day.holiday{background:var(--redDark);border-color:#970510;color:#fff}.day.vacation{background:var(--yellow);border-color:#e7d700;color:#111}.day.today{outline:4px solid var(--blue);outline-offset:-4px}.day.past::after{content:"";position:absolute;left:8px;right:8px;top:50%;height:2px;background:rgba(20,20,20,.55);transform:rotate(-7deg)}.day .tag{position:absolute;bottom:3px;right:5px;font-size:8px;font-weight:900}
 .legend{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;align-items:center;margin-top:10px;font-size:12px;color:#475569}.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}.dBlue{background:var(--blue)}.dWeekend{background:var(--red)}.dHoliday{background:var(--redDark)}.dVac{background:var(--yellow);border:1px solid #d6cc00}
 .info{margin-top:10px;border-radius:14px;border:1px solid #e2e8f0;background:#fff;padding:10px 12px;box-shadow:0 4px 12px rgba(0,0,0,.08);font-size:14px;text-align:left}.info b{display:block;font-size:16px;margin-bottom:3px}.info small{color:var(--muted)}
-.overlay{display:none;position:fixed;inset:0;background:#eef2f7;z-index:20;overflow:auto;padding:14px}.overlay.show{display:block}.yearHead{display:flex;align-items:center;gap:8px;margin-bottom:12px}.yearHead h2{flex:1;margin:0;font-size:22px}.yearHead button{border:0;border-radius:10px;padding:10px 12px;color:#fff;font-weight:900}.yearGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.miniMonth{background:#fff;border:1px solid #d7dee8;border-radius:12px;padding:8px;min-height:148px}.miniMonth h3{text-align:center;margin:0 0 6px;font-size:16px}.miniWeek,.miniDays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}.miniWeek div{background:#111;color:#fff;font-size:10px;font-weight:900;text-align:center;padding:3px 0}.miniDay{height:21px;border:1px solid #e5e7eb;text-align:center;font-size:11px;line-height:20px}.miniDay.weekend{background:var(--red);color:#fff}.miniDay.holiday{background:var(--redDark);color:#fff}.miniDay.vacation{background:var(--yellow);color:#111}.miniDay.today{outline:2px solid var(--blue);outline-offset:-2px}.miniNotes{font-size:9px;color:#555;margin-top:5px;min-height:18px;text-align:left}
-@media(max-width:520px){.app{padding-top:8px}.yearGrid{grid-template-columns:1fr}.overlay{padding:10px}.miniMonth{min-height:auto}.miniDay{height:28px;line-height:27px;font-size:12px}}
-@media print{body{background:#fff}.app{display:none}.overlay{display:block!important;position:static;padding:0;background:#fff}.yearHead button{display:none}.yearHead h2{text-align:center}.yearGrid{grid-template-columns:repeat(3,1fr);gap:8px}.miniMonth{break-inside:avoid;padding:6px}.miniDay{height:16px;line-height:15px;font-size:9px}.miniWeek div{font-size:8px;padding:2px 0}.miniMonth h3{font-size:12px}.miniNotes{font-size:7px}@page{size:A4 portrait;margin:7mm}}
+
+.annual{display:none;max-width:980px;margin:0 auto;padding:12px 18px;background:#fff;min-height:100vh}
+.annual.show{display:block}
+.annual h2{margin:8px 0 14px;font-size:22px;text-align:left}
+.annualHead{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.annualHead h2{flex:1}
+.annualHead button{border:0;border-radius:10px;padding:10px 14px;color:#fff;font-weight:900;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+.annualGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.miniMonth{background:#fff;border:1px solid #d1d5db;border-radius:12px;padding:9px;min-height:210px}
+.miniMonth h3{text-align:center;margin:0 0 8px;font-size:18px;font-weight:900}
+.miniGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.miniGrid div{text-align:center;font-size:13px;min-height:24px;line-height:24px;border:1px solid #e5e7eb;color:#2f3a45}
+.miniGrid .dow2{background:#090909!important;color:#fff!important;font-size:12px;font-weight:900;border-color:#090909;line-height:20px;min-height:20px}
+.miniGrid .emptyMini{border:0;background:transparent}
+.miniGrid .miniWeekend{background:var(--red)!important;color:#fff!important;font-weight:900;border-color:#ef2f38}
+.miniGrid .miniHoliday{background:var(--redDark)!important;color:#fff!important;font-weight:900;border-color:#970510}
+.miniGrid .miniVacation{background:var(--yellow)!important;color:#111!important;font-weight:900;border-color:#d6cc00}
+.miniGrid .miniToday{outline:3px solid var(--blue);outline-offset:-3px}
+.miniNotes{font-size:11px;color:#56606c;margin-top:7px;min-height:28px;line-height:1.25;text-align:left}
+@media(max-width:760px){.annualGrid{grid-template-columns:repeat(3,1fr);gap:8px}.annual{padding:10px 20px}.miniMonth{padding:7px;min-height:160px}.miniMonth h3{font-size:14px}.miniGrid div{font-size:10px;min-height:17px;line-height:17px}.miniGrid .dow2{font-size:9px;min-height:16px;line-height:16px}.miniNotes{font-size:9px;min-height:22px}}
+@media(max-width:520px){.app{padding-top:8px}.annual{padding:10px}.annualGrid{grid-template-columns:1fr}.miniMonth{min-height:auto}.miniGrid div{font-size:12px;min-height:25px;line-height:25px}.miniGrid .dow2{font-size:11px;min-height:20px;line-height:20px}.annualHead h2{font-size:18px}}
+@media print{body{background:#fff}.app{display:none}.annual{display:block!important;max-width:none;padding:0;background:#fff;min-height:auto}.annualHead button{display:none}.annualHead h2{text-align:center;font-size:18px;margin:0 0 6px}.annualGrid{grid-template-columns:repeat(3,1fr);gap:6px}.miniMonth{break-inside:avoid;border-radius:6px;padding:5px;min-height:0}.miniMonth h3{font-size:13px;margin-bottom:4px}.miniGrid div{font-size:8px;min-height:13px;line-height:13px;border-width:.5px}.miniGrid .dow2{font-size:8px;min-height:12px;line-height:12px}.miniNotes{font-size:7px;min-height:12px;margin-top:3px}@page{size:A4 portrait;margin:7mm}}
 </style>
 </head>
 <body>
@@ -42,9 +61,9 @@ body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:
     <div class="info" id="info"><b>📅 Toca un día</b><small>1 toque: vacaciones · 2º toque: festivo manual · 3º toque: borrar</small></div>
   </div>
 </div>
-<div class="overlay" id="yearOverlay"><div class="yearHead"><h2 id="yearTitle">Calendario Barcelona</h2><button class="blue" onclick="window.print()">Imprimir A4</button><button style="background:#4b5563" onclick="closeYear()">Cerrar</button></div><div class="yearGrid" id="yearGrid"></div></div>
+<div class="annual" id="yearOverlay"><div class="annualHead"><h2 id="yearTitle">Calendario Barcelona</h2><button class="blue" onclick="window.print()">Imprimir</button><button style="background:#4b5563" onclick="closeYear()">Cerrar</button></div><div class="annualGrid" id="yearGrid"></div></div>
 <script>
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=final-real-1').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=final-definitiva-2').catch(()=>{}));}
 const monthNames=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 const wd=['L','M','X','J','V','S','D'];
 let now=new Date(), year=now.getFullYear(), month=now.getMonth(), selectedKey=null;
@@ -63,8 +82,8 @@ function cycleDay(k){let st=getState(k); if(!st)setState(k,'vacation'); else if(
 function markSelectedHoliday(){if(!selectedKey){document.getElementById('info').innerHTML='<b>Primero toca un día</b><small>Después pulsa + Festivo si quieres marcarlo como festivo manual.</small>';return} setState(selectedKey,'manualHoliday'); localStorage.setItem('name_'+selectedKey,'Festivo manual'); render()}
 function refreshHolidays(){render();document.getElementById('info').innerHTML='<b>Festivos actualizados</b><small>Se calculan automáticamente para el año actual y el siguiente.</small>'}
 function prev(){month--;if(month<0){month=11;year--}render()} function next(){month++;if(month>11){month=0;year++}render()} function todayBtn(){let t=new Date();year=t.getFullYear();month=t.getMonth();render()}
-function openYear(){document.getElementById('yearOverlay').classList.add('show');drawYear()} function closeYear(){document.getElementById('yearOverlay').classList.remove('show')}
-function drawYear(){document.getElementById('yearTitle').textContent='Calendario Barcelona '+year;let yg=document.getElementById('yearGrid');yg.innerHTML='';for(let m=0;m<12;m++){let box=document.createElement('div');box.className='miniMonth';box.innerHTML=`<h3>${monthNames[m]}</h3><div class="miniWeek">${wd.map(x=>`<div>${x}</div>`).join('')}</div><div class="miniDays"></div><div class="miniNotes"></div>`;let days=box.querySelector('.miniDays'), notes=box.querySelector('.miniNotes');let offset=(new Date(year,m,1).getDay()+6)%7, total=new Date(year,m+1,0).getDate();for(let i=0;i<offset;i++)days.appendChild(document.createElement('div'));let ns=[];for(let d=1;d<=total;d++){let date=new Date(year,m,d),k=keyOf(year,m,d),cell=document.createElement('div');cell.className='miniDay';cell.textContent=d;if(date.getDay()==0||date.getDay()==6)cell.classList.add('weekend');if(isOfficial(k)){cell.classList.add('holiday');ns.push(`${d} ${isOfficial(k)}`)}let st=getState(k);if(st==='vacation')cell.classList.add('vacation');if(st==='manualHoliday'){cell.classList.add('holiday');ns.push(`${d} ${manualName(k)}`)}if(date.toDateString()===new Date().toDateString())cell.classList.add('today');days.appendChild(cell)}notes.textContent=ns.join(' · ');yg.appendChild(box)}}
+function openYear(){document.getElementById('app').style.display='none';document.getElementById('yearOverlay').classList.add('show');drawYear()} function closeYear(){document.getElementById('yearOverlay').classList.remove('show');document.getElementById('app').style.display='block'}
+function drawYear(){document.getElementById('yearTitle').textContent='Calendario Barcelona '+year;let yg=document.getElementById('yearGrid');yg.innerHTML='';for(let m=0;m<12;m++){let box=document.createElement('div');box.className='miniMonth';box.innerHTML=`<h3>${monthNames[m]}</h3><div class="miniGrid">${wd.map(x=>`<div class="dow2">${x}</div>`).join('')}</div><div class="miniNotes"></div>`;let grid=box.querySelector('.miniGrid'), notes=box.querySelector('.miniNotes');let offset=(new Date(year,m,1).getDay()+6)%7, total=new Date(year,m+1,0).getDate();for(let i=0;i<offset;i++){let e=document.createElement('div');e.className='emptyMini';grid.appendChild(e)}let ns=[];for(let d=1;d<=total;d++){let date=new Date(year,m,d),k=keyOf(year,m,d),cell=document.createElement('div');cell.textContent=d;if(date.getDay()==0||date.getDay()==6)cell.classList.add('miniWeekend');if(isOfficial(k)){cell.classList.add('miniHoliday');ns.push(`${d} ${isOfficial(k)}`)}let st=getState(k);if(st==='vacation')cell.classList.add('miniVacation');if(st==='manualHoliday'){cell.classList.add('miniHoliday');ns.push(`${d} ${manualName(k)}`)}if(date.toDateString()===new Date().toDateString())cell.classList.add('miniToday');grid.appendChild(cell)}notes.textContent=ns.join(' · ');yg.appendChild(box)}}
 render();
 </script>
 </body>
