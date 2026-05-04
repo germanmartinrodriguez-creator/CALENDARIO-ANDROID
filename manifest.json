@@ -1,32 +1,15 @@
 {
-  "id": "/CALENDARIO-ANDROID/",
-  "name": "Calendario Barcelona Pro",
+  "name": "Calendario Barcelona",
   "short_name": "Calendario",
-  "description": "Calendario laboral de Barcelona con festivos automáticos y vacaciones manuales.",
-  "start_url": "./index.html?v=ultra3",
+  "description": "Calendario laboral de Barcelona con festivos y vacaciones",
+  "start_url": "./index.html?v=final-real-1",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#eef3f8",
-  "theme_color": "#c1121f",
+  "orientation": "any",
+  "background_color": "#f2f5f9",
+  "theme_color": "#b90f1d",
   "icons": [
-    {
-      "src": "./icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "./icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "./icono.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }
